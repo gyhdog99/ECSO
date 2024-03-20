@@ -9,7 +9,6 @@ This repository contains the implementation of the paper:
 
 <img src="./assets/framework.png" alt="drawing" width="800"/>
 
-<img src="./assets/demo.gif" alt="drawing" width="800"/>
 
 ## Installation
 
@@ -36,7 +35,11 @@ This repository contains the implementation of the paper:
 
 ## Demo
 
-To launch a Gradio demo locally, please run the following commands one by one. 
+We show the 4 core steps (i.e, 1. direct answer, 2. harm detect, 3. query-aware I2T caption, 4. safe generation w/o images) of ECSO in a Gradio demo, which looks like the following gif:
+
+<img src="./assets/demo.gif" alt="drawing" width="800"/>
+
+To launch such a Gradio demo locally, please run the following commands one by one. 
 
 **Launch a controller**
 
@@ -57,6 +60,7 @@ You just launched the Gradio web interface. Now, you can open the web interface 
 ```
 python -m llava.serve.model_worker --host 0.0.0.0 --controller http://localhost:10000 --port 40000 --worker http://localhost:40000 --model-path llava-v1.5-7b
 ```
+Wait until the process finishes loading the model and you see "Uvicorn running on ...". Now, refresh your Gradio web UI, and you will see the model you just launched in the model list.
 
 ## Acknowledgement
 + [LLaVA](https://github.com/haotian-liu/LLaVA) This repository is built upon LLaVA!

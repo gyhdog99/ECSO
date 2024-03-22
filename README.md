@@ -13,7 +13,7 @@ This repository contains the implementation of the paper:
 ## Installation
 
 
-1. Install [LLaVA](https://github.com/haotian-liu/LLaVA), the codebase on which ECSO is built. Follow the guidelines [here](https://github.com/haotian-liu/LLaVA?tab=readme-ov-file#install).
+1. Install [LLaVA](https://github.com/haotian-liu/LLaVA), the example codebase ECSO is built on in this repo. Follow the guidelines [here](https://github.com/haotian-liu/LLaVA?tab=readme-ov-file#install).
 
 2. Clone the repository of ECSO.
 

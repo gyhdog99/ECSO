@@ -1,5 +1,5 @@
 # ECSO
-[![arXiv](https://img.shields.io/badge/arXiv-2403.09572-b31b1b.svg?style=plastic)](https://arxiv.org/abs/2403.09572) [![arXiv](https://img.shields.io/badge/Web-ECSO-blue.svg?style=plastic)](https://kaichen1998.github.io/projects/mocle/)
+[![arXiv](https://img.shields.io/badge/arXiv-2403.09572-b31b1b.svg?style=plastic)](https://arxiv.org/abs/2403.09572) [![arXiv](https://img.shields.io/badge/Web-ECSO-blue.svg?style=plastic)](https://gyhdog99.github.io/projects/ecso/)
 
 This repository contains the implementation of the paper:
 

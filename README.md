@@ -13,25 +13,21 @@ This repository contains the implementation of the paper:
 ## Installation
 
 
-1. Install [LLaVA](https://github.com/haotian-liu/LLaVA), the example codebase ECSO is built on in this repo. Follow the guidelines [here](https://github.com/haotian-liu/LLaVA?tab=readme-ov-file#install).
-
-2. Clone the repository of ECSO.
+1. Clone this repository and navigate to ECSO folder.
 
    ```bash
    git clone https://github.com/gyhdog99/ecso/
+   cd ECSO-main
+   ```
+2. Install Package
+
+   ```bash
+    conda create -n ecso python=3.10 -y
+    conda activate ecso
+    pip install --upgrade pip  # enable PEP 660 support
+    pip install -e .
    ```
 
-4. Copy ```gradio_web_server_ecso.py``` and all the images in ```examples``` in this repository to the following paths in LLaVA:
-
-    ```
-    └── llava
-        └──serve
-            ├──gradio_web_server_ecso.py
-            └──examples
-                ├── bomb.png
-                ├── missiles.png
-                └── train.png
-    ```
 
 ## Demo
 
@@ -61,6 +57,68 @@ You just launched the Gradio web interface. Now, you can open the web interface 
 python -m llava.serve.model_worker --host 0.0.0.0 --controller http://localhost:10000 --port 40000 --worker http://localhost:40000 --model-path llava-v1.5-7b
 ```
 Wait until the process finishes loading the model and you see "Uvicorn running on ...". Now, refresh your Gradio web UI, and you will see the model you just launched in the model list.
+
+## Evaluation on Safety Benchmarks
+
+**Data/Model Preparation**
+
+Download [VLSafe](https://huggingface.co/datasets/YangyiYY/LVLM_NLF/tree/main/VLSafe), [MM-SafetyBench](https://github.com/isXinLiu/MM-SafetyBench) and [COCO images](http://images.cocodataset.org/zips/train2017.zip)
+
+**VLSafe**
+
+1. Generate direct/ECSO responses
+    ```shell
+    bash scripts/v1_5/eval_safe/gen_vlsafe.sh
+    bash scripts/v1_5/eval_safe/gen_vlsafe_tell_ask.sh
+    ```
+
+2. Evaluation
+    ```shell
+    bash llava/eval/eval_vlsafe.sh
+    ```
+
+**MM-SafetyBench**
+
+1. Generate direct/ECSO responses
+    ```shell
+    bash scripts/v1_5/eval_safe/gen_mmsafe.sh
+    bash scripts/v1_5/eval_safe/gen_mmsafe_tell_ask.sh
+    ```
+
+2. Evaluation
+    ```shell
+    bash llava/eval/eval_mmsafe_loop.sh
+    ```
+
+## Evaluating Utilities on MLLM benchmarks
+
+**Data/Model Preparation**
+
+Follow the [guideline](https://github.com/haotian-liu/LLaVA/blob/main/docs/Evaluation.md) to download the evaluation data of MME, MMBench and MM-Vet.
+
+**MME**
+
+Generate direct/ECSO responses
+```shell
+bash scripts/v1_5/eval/mme.sh
+bash scripts/v1_5/eval_safe/gen_mme_unsafe_ask.sh
+```
+
+**MMBench**
+
+Generate direct/ECSO responses
+```shell
+bash scripts/v1_5/eval/mmbench.sh
+bash scripts/v1_5/eval_safe/gen_mmbench_unsafe_ask.sh.sh
+```
+
+**MM-Vet**
+
+Generate direct/ECSO responses
+```shell
+bash scripts/v1_5/eval/mmvet.sh
+bash scripts/v1_5/eval_safe/gen_mm-vet_unsafe_ask.sh.sh
+```
 
 ## Acknowledgement
 + [LLaVA](https://github.com/haotian-liu/LLaVA) This repository is built upon LLaVA!

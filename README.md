@@ -1,5 +1,5 @@
 # ECSO
-[![arXiv](https://img.shields.io/badge/arXiv-2403.09572-b31b1b.svg?style=plastic)](https://arxiv.org/abs/2403.09572) [![arXiv](https://img.shields.io/badge/Web-ECSO-blue.svg?style=plastic)](https://kaichen1998.github.io/projects/mocle/)
+[![arXiv](https://img.shields.io/badge/arXiv-2403.09572-b31b1b.svg?style=plastic)](https://arxiv.org/abs/2403.09572) [![arXiv](https://img.shields.io/badge/Web-ECSO-blue.svg?style=plastic)](https://gyhdog99.github.io/projects/ecso/)
 
 This repository contains the implementation of the paper:
 
@@ -13,7 +13,7 @@ This repository contains the implementation of the paper:
 ## Installation
 
 
-1. Install [LLaVA](https://github.com/haotian-liu/LLaVA), the codebase on which ECSO is built. Follow the guidelines [here](https://github.com/haotian-liu/LLaVA?tab=readme-ov-file#install).
+1. Install [LLaVA](https://github.com/haotian-liu/LLaVA), the example codebase ECSO is built on in this repo. Follow the guidelines [here](https://github.com/haotian-liu/LLaVA?tab=readme-ov-file#install).
 
 2. Clone the repository of ECSO.
 

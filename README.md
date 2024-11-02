@@ -5,6 +5,7 @@ This repository contains the implementation of the paper:
 
 > ECSO: Eyes Closed, Safety On: Protecting Multimodal LLMs via Image-to-Text Transformation <br>
 > [Yunhao Gou](https://gyhdog.github.io/), [Kai Chen](https://kaichen1998.github.io/), [Zhili Liu](https://scholar.google.com/citations?user=FdR09jsAAAAJ&hl=zh-CN), [Lanqing Hong](https://scholar.google.com/citations?hl=zh-CN&user=2p7x6OUAAAAJ&view_op=list_works&sortby=pubdate), [Hang Xu](https://xuhangcn.github.io/), [Aoxue Li](https://dblp.org/pid/152/6095.html), [Zhenguo Li](https://zhenguol.github.io/), [Dit-Yan Yeung](https://sites.google.com/view/dyyeung/home), [James T. Kwok](https://www.cse.ust.hk/~jamesk/), [Yu Zhang](https://yuzhanghk.github.io/) <br>
+> *European Conference on Computer Vision (ECCV), 2024*
 
 
 <img src="./assets/framework.png" alt="drawing" width="800"/>
